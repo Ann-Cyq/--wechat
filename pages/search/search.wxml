@@ -1,0 +1,33 @@
+<!--pages/search/search.wxml-->
+<view class="part1">
+  <scroll-view class="sv1">
+        <view  class="nav" wx:for="{{navList}}">
+        <text bindtap="click" class="{{navId==index?'active':''}}" data-id="{{index}}">{{item.tree.desc}}</text>
+        </view>
+    </scroll-view>
+</view>
+<view class="part2">
+    <scroll-view class="sv2">
+        <view class="show" wx:for="{{showList}}">
+        <block wx:if="{{navId==index}}">
+            <view class="showBrands" wx:for="{{item.tree.nodes[1].tree.nodes}}">
+                <navigator url="../list/list?brand={{item.tree.id}}&typeid={{showList[index].id}}">
+                  <block wx:if="{{item.tree.logo}}">
+                    <image src="{{item.tree.logo}}"></image>
+                </block>
+                <block wx:else>
+                    <image src="http://temp.im/50x30"></image>
+                </block>
+                <block wx:if="{{item.tree.desc==''}}">
+                    <text>{{item.tree.desc2}}</text>
+                </block>
+                <block wx:else>
+                    <text>{{item.tree.desc}}</text>
+                </block>
+                </navigator>              
+            </view>
+        </block>
+        </view>
+    </scroll-view>
+</view>
+

@@ -1,0 +1,58 @@
+.part1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+}
+.sv1{  
+    width: 100%;
+    height: 100%;
+}
+.sv1 .nav text{
+    display: block;
+    width: 99%;
+    height: 60rpx;
+    background-color: #F2f2f2;
+    color: #939393;
+    padding: 20rpx 0;
+    font-size: 40rpx;
+    text-align: center;
+    border-bottom: 1px solid #999;
+    line-height: 60rpx;
+}
+.sv1 .nav text.active{
+    background-color: #fefefe;
+}
+.part2{
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 70%;
+}
+.sv2{ 
+    width: 100%;
+    height: 100%;
+}
+.sv2 .show block{
+    display: flex;
+    justify-content: space-around;
+}
+.sv2 .show .showBrands{
+    display: inline-block;
+    width: 30%;
+    margin-left: 10rpx;
+    margin-bottom: 30rpx;
+}
+.sv2 .show .showBrands image{
+    width:100%;
+    height: 50px;
+}
+.sv2 .show .showBrands text{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 28rpx;
+    color: #999;
+    overflow: hidden;
+    height: 30rpx;
+}

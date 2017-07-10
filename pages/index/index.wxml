@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<swiper autoplay duration="1000" interval="3000" indicator-dots="ture" indicator-dots-color="#fefefe">
+    <view class="logo" wx:for="{{logos}}">
+      <swiper-item>
+        <image src="{{item.picurl}}"></image>
+      </swiper-item>
+    </view>
+</swiper>
+<view id="themePav">
+    <text>主题馆</text>
+    <scroll-view class="" scroll-y>
+        <view class="themes"  wx:for="{{themes}}">
+            <navigator url="../brand/brand?id={{item.id}}">
+              <image src="{{item.smallpic}}"></image>
+            </navigator>
+        </view>
+    </scroll-view>
+</view>
+<view id="choose-part">
+  <text class="choose-title">环球精选</text>
+  <scroll-view scroll-y>
+    <view class="chooses" wx:for="{{chooses}}">
+        <navigator url="../detail/detail?id={{item.id}}">
+          <image src="{{item.choicepic}}"></image>
+          <text>{{item.title}}</text>
+        </navigator>
+    </view>  
+  </scroll-view>
+</view>

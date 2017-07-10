@@ -1,0 +1,36 @@
+/* pages/list/list.wxss */
+.list{
+    margin-bottom: 10rpx;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc; 
+}
+.list navigator{
+    width: 100%;
+    height: 200rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.list navigator>image{
+    width: 30%;
+    height: 100%;
+}
+.list navigator .introduce{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.list navigator .introduce text:nth-child(1){
+    flex: 1;
+    color: #ccc;
+}
+.list navigator .introduce text:nth-child(2){
+    flex: 1;
+    color: #282828;
+    font-size: 30rpx;
+}
+.list navigator .introduce text:nth-child(3){
+    flex: 1;
+    color: orangered;
+}

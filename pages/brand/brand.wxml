@@ -1,0 +1,14 @@
+<!--pages/brand/brand.wxml-->
+<scroll-view>
+    <view class="brand" wx:for="{{brands}}">
+      <navigator url="../list/list?brand={{item.id}}&typeid={{item.typeid}}">
+        <image class="pic" src="{{item.pic}}"></image>
+        <view class="introduce">
+          <image src="{{item.logo}}"></image>
+          <text>{{item.chinesename}}</text>
+          <text class="brief">{{item.brief}}</text>
+          <text class="price">￥{{item.minprice}}元/件起</text>
+        </view>
+      </navigator>
+    </view>
+</scroll-view>

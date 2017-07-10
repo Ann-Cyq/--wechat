@@ -1,0 +1,13 @@
+<!--pages/list/list.wxml-->
+<scroll-view>
+    <view class="list" wx:for="{{list}}">
+      <navigator url="../detail/detail?id={{item.id}}">
+        <image src="{{item.goodspics}}"></image>
+        <view class="introduce">
+            <text>{{item.country}} {{item.bigname}}</text>
+            <text>{{item.title}}</text>
+            <text>￥{{item.ourprice}}</text>
+        </view>
+      </navigator>
+    </view>
+</scroll-view>
